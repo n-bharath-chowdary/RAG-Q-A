@@ -10,22 +10,24 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
   min-height: 100vh;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+  align-items: flex-start;
 }
 
 .app {
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   border-radius: 16px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
 }
+
 
 header {
   text-align: center;
@@ -163,4 +165,46 @@ input[type="file"] {
   color: #00e3ae;
   font-size: 0.95rem;
   font-family: monospace;
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .upload-box {
+    font-size: 0.95rem;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+  }
+
+  textarea {
+    height: 120px;
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .response-box {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  #graphContainer {
+    height: 200px;
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  .app {
+    padding: 15px;
+  }
+
+  .upload-wrapper {
+    margin-bottom: 1rem;
+  }
 }
