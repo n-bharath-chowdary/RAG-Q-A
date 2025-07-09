@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Q&A System</title>
+    <link rel="stylesheet" href="/RAG/styel.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>📚 RAG-Based Information Correlation System</h1>
+        <p>
+          Upload documents, ask questions, visualize knowledge. All in one
+          place.
+        </p>
+      </header>
+
+      <main>
+        <div class="card">
+          <div class="upload-wrapper">
+            <label for="pdfUpload" class="upload-box">
+              <span>📎 Upload PDF Documents</span>
+              <input
+                type="file"
+                id="pdfUpload"
+                multiple
+                accept="application/pdf"
+                onchange="handlePDFUpload()"
+              />
+            </label>
+          </div>
+
+          <textarea
+            id="userQuery"
+            placeholder="Ask a question like: 'What are the key findings from all reports?'"
+          ></textarea>
+          <button onclick="askQuestion()">🔍 Ask</button>
+          <div id="responseArea" class="response-box"></div>
+
+          <div class="graph-section">
+            <h2>🧠 Knowledge Graph</h2>
+            <div id="graphContainer">(Graph will appear here)</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>🚀 Built for AI document analysis | <span>Kiddosphere Labs</span></p>
+      </footer>
+    </div>
+
+    <script src="/RAG/script.js"></script>
+    <script src="/RAG/components/fileUpload.js"></script>
+    <script src="/RAG/components/graphVisualizer.js"></script>
+  </body>
+</html>
