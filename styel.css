@@ -100,7 +100,12 @@ footer {
   color: #aaa;
 }
 
-footer span a {
+footer span {
+  color: #00e3ae;
+  font-weight: 600;
+}
+
+footer a {
   color: #00e3ae;
   font-weight: 600;
 }
